@@ -8,8 +8,8 @@ import javax.swing.JOptionPane;
 
 public class LoVivido {
 
-    static String n, e;
-    static int a, m, d, h;
+    static String nombre, edad;
+    static int años, meses, dias, horas;
 
     public static void mostrarDatos(int m, int d, int h, String n) {
         JOptionPane.showMessageDialog(null, "Meses: " + m, "Numero de meses vividos de " + n, JOptionPane.INFORMATION_MESSAGE);
@@ -17,20 +17,20 @@ public class LoVivido {
         JOptionPane.showMessageDialog(null, "Horas: " + h, "Numero de horas vividos de " + n, JOptionPane.INFORMATION_MESSAGE);
     }
     public static void pedirDatos() {
-        n = JOptionPane.showInputDialog("Escriba su nombre: ");
-        e = JOptionPane.showInputDialog("Escriba su edad: ");
+        nombre = JOptionPane.showInputDialog("Escriba su nombre: ");
+        edad = JOptionPane.showInputDialog("Escriba su edad: ");
     }
     public static void calcular() {
-        a = Integer.parseInt(e);
-        m = (a * 12);
-        d = (a * 365);
-        h = (d * 24);
+        años = Integer.parseInt(edad);
+        meses = (años * 12);
+        dias = (años * 365);
+        horas = (dias * 24);
     }
 
     public static void main(String[] args) {
         LoVivido.pedirDatos();
         LoVivido.calcular();
-        LoVivido.mostrarDatos(m, d, h, n);
+        LoVivido.mostrarDatos(meses, dias, horas, nombre);
         System.exit(0);
     }
 
