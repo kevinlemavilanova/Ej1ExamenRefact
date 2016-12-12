@@ -9,22 +9,15 @@ import javax.swing.JOptionPane;
 public class LoVivido {
 
 public static void main(String[] args) {
-String n;
-String e;
 
-int m;
-int d;
-int h;
-int a;
-
-n = JOptionPane.showInputDialog ("Escriba su nombre: ");
-e = JOptionPane.showInputDialog ("Escriba su edad: ");
+String n = JOptionPane.showInputDialog ("Escriba su nombre: ");
+String e = JOptionPane.showInputDialog ("Escriba su edad: ");
  
-a = Integer.parseInt (e);
+int a = Integer.parseInt (e);
  
-m = (a*12);
-d = (a*365);
-h = (d*24);
+int m = (a*12);
+int d = (a*365);
+int h = (d*24);
  
  JOptionPane.showMessageDialog(null,  "Meses: "  +m,"Numero de meses vividos de " +n,JOptionPane.INFORMATION_MESSAGE);
 
